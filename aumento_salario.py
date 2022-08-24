@@ -39,15 +39,12 @@ while not sair:
             linha()
         except Exception as e1:
             print(f'erro encontrado> {e1}//digite novamente!')
-
     if opc == 3:
-        sleep(1)
-        print('saindo do programa..',
-              flush=True)
-        sleep(0.9)
-        sair = True
-    else:
-        linha()
-        print('digite uma opção valida!'.upper())
-        linha()
-
+        try:
+            sleep(1)
+            print('saindo do programa..',
+                  flush=True)
+            sleep(0.5)
+            sair = True
+        except Exception as e2:
+            print(f'algum erro detectado:{e2}')
